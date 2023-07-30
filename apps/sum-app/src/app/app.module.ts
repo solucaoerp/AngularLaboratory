@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
-import { SumModule } from './sum/sum.module';
+import { SumModule } from './sum';
 
 @NgModule({
   declarations: [
