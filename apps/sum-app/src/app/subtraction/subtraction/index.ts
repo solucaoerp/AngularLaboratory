@@ -1,1 +1,0 @@
-export * from './subtraction.component';
