@@ -1,6 +1,9 @@
 <form>
-    Número 1: <input type="text" /><br />
-    Número 2: <input type="text" /><br />
-    <input type="button" value="Somar" /><br /><br />
-    Resultado: <input type="text" />
+
+    Número 1: <input #numero1 type="text" /><br />
+    Número 2: <input #numero2 type="text" /><br />
+
+    <input type="button" value="Somar" (click)="somar(numero1.value, numero2.value)" /><br /><br />
+
+    Resultado: <input type="text" [value]="resultSomaShow" readonly />
 </form>
