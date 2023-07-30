@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SumService } from '../services';
 
 @Component({
   selector: 'app-sum',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SumComponent implements OnInit {
 
-  constructor() { }
+  constructor(private sumService: SumService) { }
 
   ngOnInit(): void {
   }
