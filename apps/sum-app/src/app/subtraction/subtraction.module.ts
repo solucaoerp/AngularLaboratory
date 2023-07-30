@@ -10,6 +10,9 @@ import { SubtractionService } from './services';
   imports: [
     CommonModule
   ],
+  exports: [
+    SubtractionComponent
+  ],
   providers: [
     SubtractionService
   ]
