@@ -8,6 +8,9 @@ import { SumComponent } from './sum';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    SumComponent
   ]
 })
 export class SumModule { }
