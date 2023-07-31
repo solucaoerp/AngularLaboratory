@@ -1,12 +1,16 @@
-<form>
+<div class="calculator-container">
+    <form>
+        <h2>Calculadora</h2>
+        Número 1: <input #numero1 type="text" pattern="^-?[0-9]\d*(\.\d+)?$" /><br />
+        Número 2: <input #numero2 type="text" pattern="^-?[0-9]\d*(\.\d+)?$" /><br />
 
-    Número 1: <input #numero1 type="text" /><br />
-    Número 2: <input #numero2 type="text" /><br />
+        <div class="buttons-container">
+            <input type="button" value="+" (click)="calcular('soma', numero1, numero2)" />
+            <input type="button" value="-" (click)="calcular('subtracao', numero1, numero2)" />
+            <input type="button" value="x" (click)="calcular('multiplicacao', numero1, numero2)" />
+            <input type="button" value="÷" (click)="calcular('divisao', numero1, numero2)" />
+        </div>
 
-    <input type="button" value="Somar" (click)="calcular('soma', numero1.value, numero2.value)" /><br />
-    <input type="button" value="Subtrair" (click)="calcular('subtracao', numero1.value, numero2.value)" /><br />
-    <input type="button" value="Multiplicar" (click)="calcular('multiplicacao', numero1.value, numero2.value)" /><br />
-    <input type="button" value="Dividir" (click)="calcular('divisao', numero1.value, numero2.value)" /><br /><br />
-
-    Resultado: <input type="text" [value]="resultShow" readonly />
-</form>
+        Resultado: <input type="text" [value]="resultShow" readonly />
+    </form>
+</div>
