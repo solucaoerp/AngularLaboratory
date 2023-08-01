@@ -79,11 +79,11 @@ typings/
 .eslintcache
 
 # dotenv environment variables file
-.env
-.env.test
+# .env
+# .env.test
 
 # TSLint config
-tslint.json
+# tslint.json
 
 # Project configuration
-angular.json
+# angular.json
