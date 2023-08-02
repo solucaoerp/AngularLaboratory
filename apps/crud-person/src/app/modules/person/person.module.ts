@@ -6,10 +6,12 @@ import { FormsModule } from '@angular/forms';
 
 import { PersonService } from 'src/app/services/person/person.service';
 import { PersonListComponent } from 'src/app/components/person/person-list/person-list.component';
+import { PersonCreateComponent } from 'src/app/components/person/person-create/person-create.component';
 
 @NgModule({
   declarations: [
-    PersonListComponent
+    PersonListComponent,
+    PersonCreateComponent
   ],
   imports: [
     CommonModule,
