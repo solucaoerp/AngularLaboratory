@@ -21,4 +21,12 @@ export class PersonListComponent implements OnInit {
   findAll(): Person[] {
     return this.personService.findAll();
   }
+
+  delete($event: any, person: Person): void {
+    $event.preventDefault(); // altera o comportamento padrao do href(link), mantendo-se na página
+    if (confirm(`Deseja realmente remover a pessoa ${person.nome}?`)) {
+      this.personService.delete(person.id!);
+      this.persons = this.findAll();
+    }
+  }
 }
