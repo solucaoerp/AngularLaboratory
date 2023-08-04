@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-//import { RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
 import { PersonService } from 'src/app/services/person/person.service';
@@ -17,7 +16,7 @@ import { PersonRoutingModule } from './person-routing.module';
   imports: [
     CommonModule,
     PersonRoutingModule,
-    //RouterModule,
+    RouterModule,
     FormsModule
 
   ],

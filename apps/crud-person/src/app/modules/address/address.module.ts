@@ -1,7 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AddressRoutingModule } from './address-routing.module';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
+import { AddressRoutingModule } from './address-routing.module';
 import { AddressListComponent } from 'src/app/components/address/address-list/address-list.component';
 import { AddressFormComponent } from 'src/app/components/address/address-form/address-form.component';
 
@@ -12,7 +14,9 @@ import { AddressFormComponent } from 'src/app/components/address/address-form/ad
     ],
     imports: [
         CommonModule,
-        AddressRoutingModule
+        AddressRoutingModule,
+        RouterModule,
+        FormsModule
     ]
 })
 export class AddressModule { }
