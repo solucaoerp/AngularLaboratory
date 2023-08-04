@@ -3,16 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { PersonModule } from './modules/person/person.module';
+import { AddressListComponent } from './components/address/address-list/address-list.component';
+import { AddressFormComponent } from './components/address/address-form/address-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    AddressListComponent,
+    AddressFormComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    PersonModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
