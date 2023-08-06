@@ -15,6 +15,10 @@ const routes: Routes = [
     loadChildren: () => import('./modules/state/state.module').then(m => m.StateModule)
   },
   {
+    path: 'cities',
+    loadChildren: () => import('./modules/city/city.module').then(m => m.CityModule)
+  },
+  {
     path: '',
     redirectTo: 'persons',
     pathMatch: 'full'
