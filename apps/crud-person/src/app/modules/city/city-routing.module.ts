@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { CityFormComponent } from 'src/app/components/city/city-form/city-form.component';
-import { CityListComponent } from 'src/app/components/city/city-list/city-list.component';
+import { CityFormComponent, CityListComponent } from 'src/app/components';
 
 const routes: Routes = [
     { path: '', redirectTo: 'list', pathMatch: 'full' },

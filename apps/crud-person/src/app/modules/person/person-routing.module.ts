@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { PersonFormComponent } from 'src/app/components/person/person-form/person-form.component';
-import { PersonListComponent } from 'src/app/components/person/person-list/person-list.component';
+import { PersonFormComponent, PersonListComponent } from 'src/app/components';
 
 const routes: Routes = [
     { path: '', redirectTo: 'list', pathMatch: 'full' },

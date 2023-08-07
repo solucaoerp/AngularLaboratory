@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { StateService } from 'src/app/services/state/state.service';
-import { State } from 'src/app/shared/models/state.model';
+import { StateService } from 'src/app/services';
+import { State } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-state-list',

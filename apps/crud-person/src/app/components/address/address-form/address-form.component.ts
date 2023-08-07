@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { AddressService } from 'src/app/services/address/address.service';
-import { Address } from 'src/app/shared/models/address.model';
+import { AddressService } from 'src/app/services';
+import { Address } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-address-form',

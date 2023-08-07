@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { PersonService } from 'src/app/services/person/person.service';
-import { Person } from 'src/app/shared/models/person.model';
+import { PersonService } from 'src/app/services';
+import { Person } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-person-form',
@@ -35,7 +35,11 @@ export class PersonFormComponent implements OnInit {
       }
     } else {
       this.isNew = true;
-      this.person = {}; // Cria uma instância vazia
+      this.person = {
+        nome: '',
+        dataNascimento: '',
+        idade: null
+      };
     }
   }
 

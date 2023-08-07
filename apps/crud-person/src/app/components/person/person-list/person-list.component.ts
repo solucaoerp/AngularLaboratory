@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
-import { PersonService } from 'src/app/services/person/person.service';
-import { Person } from 'src/app/shared/models/person.model';
+import { PersonService } from 'src/app/services';
+import { Person } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-person-list',
@@ -23,7 +23,7 @@ export class PersonListComponent implements OnInit {
   }
 
   delete($event: any, person: Person): void {
-    $event.preventDefault(); // altera o comportamento padrao do href(link), mantendo-se na página
+    $event.preventDefault(); // usado para prevenir o comportamento padrão de um evento
     if (confirm(`Deseja realmente remover a pessoa ${person.nome}?`)) {
       this.personService.deletePerson(person.id!);
       this.persons = this.findAll();

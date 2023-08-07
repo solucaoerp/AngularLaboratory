@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 
-import { PersonService } from 'src/app/services/person/person.service';
-import { PersonListComponent } from 'src/app/components/person/person-list/person-list.component';
-import { PersonFormComponent } from 'src/app/components/person/person-form/person-form.component';
+import { SharedModule } from 'src/app/shared';
+
+import { PersonFormComponent, PersonListComponent } from 'src/app/components';
 import { PersonRoutingModule } from './person-routing.module';
+import { PersonService } from 'src/app/services';
 
 @NgModule({
   declarations: [
@@ -15,13 +16,15 @@ import { PersonRoutingModule } from './person-routing.module';
   ],
   imports: [
     CommonModule,
-    PersonRoutingModule,
     RouterModule,
-    FormsModule
-
+    FormsModule,
+    ReactiveFormsModule,
+    PersonRoutingModule,
+    SharedModule
   ],
   providers: [
-    PersonService
+    PersonService,
+    DatePipe
   ]
 })
 export class PersonModule { }

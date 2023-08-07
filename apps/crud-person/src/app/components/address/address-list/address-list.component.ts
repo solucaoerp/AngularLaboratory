@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { AddressService } from 'src/app/services/address/address.service';
-import { Address } from 'src/app/shared/models/address.model';
+import { AddressService } from 'src/app/services';
+import { Address } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-address-list',

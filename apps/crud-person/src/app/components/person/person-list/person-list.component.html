@@ -14,9 +14,9 @@
             </th>
         </tr>
         <tr *ngFor="let person of persons">
-            <td class="text-center">{{person.id}}</td>
-            <td>{{person.nome}}</td>
-            <td>{{person.dataNascimento}}</td>
+            <td class="text-center">{{ person.id }}</td>
+            <td>{{ person.nome | formatsPipe:'toUpperCase' }}</td>
+            <td>{{ person.dataNascimento ? (person.dataNascimento | datesPipe:'toDisplay') : '' }}</td>
             <td class="text-center">{{person.idade}}</td>
             <td class="text-center" style="width: 300px">
                 <a href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info"
@@ -30,4 +30,4 @@
     </tbody>
 </table>
 
-<p *ngIf="persons.length==0">Nenhuma pessoa cadastrada.</p>
+<p *ngIf="persons.length==0">Nenhum registro cadastrado.</p>

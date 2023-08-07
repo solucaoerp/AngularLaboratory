@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
-import { CityService } from 'src/app/services/city/city.service';
-import { City } from 'src/app/shared/models/city.model';
+import { CityService } from 'src/app/services';
+import { City } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-city-list',

@@ -1,6 +1,6 @@
 export interface Person {
     id?: number;
     nome?: string;
-    idade?: number;
+    idade?: number | null;
     dataNascimento?: string;
 }

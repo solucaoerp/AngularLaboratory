@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { StateService } from 'src/app/services/state/state.service';
-import { State } from 'src/app/shared/models/state.model';
+import { StateService } from 'src/app/services';
+import { State } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-state-form',
@@ -49,5 +49,4 @@ export class StateFormComponent implements OnInit {
       this.router.navigate(['/states']);
     }
   }
-
 }

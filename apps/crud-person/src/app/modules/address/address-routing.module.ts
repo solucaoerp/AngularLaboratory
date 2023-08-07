@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AddressFormComponent } from 'src/app/components/address/address-form/address-form.component';
-import { AddressListComponent } from 'src/app/components/address/address-list/address-list.component';
+import { AddressFormComponent, AddressListComponent } from 'src/app/components';
 
 const routes: Routes = [
     { path: '', redirectTo: 'list', pathMatch: 'full' },

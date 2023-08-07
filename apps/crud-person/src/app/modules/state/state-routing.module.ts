@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { StateFormComponent } from 'src/app/components/state/state-form/state-form.component';
-import { StateListComponent } from 'src/app/components/state/state-list/state-list.component';
+import { StateFormComponent, StateListComponent } from 'src/app/components';
 
 const routes: Routes = [
     { path: '', redirectTo: 'list', pathMatch: 'full' },

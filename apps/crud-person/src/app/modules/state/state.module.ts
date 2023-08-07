@@ -3,9 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 
+import { StateFormComponent, StateListComponent } from 'src/app/components';
 import { StateRoutingModule } from './state-routing.module';
-import { StateListComponent } from 'src/app/components/state/state-list/state-list.component';
-import { StateFormComponent } from 'src/app/components/state/state-form/state-form.component';
 
 @NgModule({
     declarations: [
