@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 
 import { DatesDirective } from './directives/dates.directive';
 import { MinValidatorDirective } from './directives/min-validator.directive';

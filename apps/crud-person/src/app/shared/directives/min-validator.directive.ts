@@ -1,5 +1,5 @@
 import { Directive, Input, OnInit } from '@angular/core';
-import { Validator, NG_VALIDATORS, FormControl } from '@angular/forms';
+import { FormControl, NG_VALIDATORS, Validator } from '@angular/forms';
 
 @Directive({
   selector: '[minValidatorDirective]',

@@ -1,4 +1,4 @@
-import { Directive, HostListener, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Directive({
