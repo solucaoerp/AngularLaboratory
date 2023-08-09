@@ -19,12 +19,19 @@
             <td>{{ person.dataNascimento ? (person.dataNascimento | datesPipe:'toDisplay') : '' }}</td>
             <td class="text-center">{{person.idade}}</td>
             <td class="text-center" style="width: 300px">
-                <a href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info"
-                    [routerLink]="['/persons/edit', person.id]">
-                    <i class="fa fa-edit" aria-hidden="true"></i> Editar</a>&nbsp;
-                <a href="#" title="Remover" alt="Remover" class="btn btn-xs btn-danger"
-                    (click)="delete($event, person)">
-                    <i class="fa fa-times" aria-hidden="true"></i> Remover</a>
+
+                <button type="button" class="btn btn-xs btn-info" (click)="abrirModalPessoa(person)">
+                    <i class="fa fa-eye" aria-hidden="true"></i>
+                </button>&nbsp;
+
+                <button type="button" class="btn btn-xs btn-info" [routerLink]="['/persons/edit', person.id]">
+                    <i class="fa fa-edit" aria-hidden="true"></i>
+                </button>&nbsp;
+
+                <button type="button" class="btn btn-xs btn-info" (click)="delete($event, person)">
+                    <i class="fa fa-times" aria-hidden="true"></i>
+                </button>
+
             </td>
         </tr>
     </tbody>

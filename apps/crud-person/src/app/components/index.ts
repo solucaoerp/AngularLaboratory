@@ -6,6 +6,7 @@ export * from './city/city-list/city-list.component';
 
 export * from './person/person-form/person-form.component';
 export * from './person/person-list/person-list.component';
+export * from './person/person-modal/person-modal.component';
 
 export * from './state/state-form/state-form.component';
 export * from './state/state-list/state-list.component';
