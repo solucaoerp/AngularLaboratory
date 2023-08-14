@@ -16,14 +16,11 @@
         <!--Group Estado-->
         <div class="form-group">
             <label for="estado">Estado:</label>
-            <input type="text" class="form-control" id="estado" name="estado" [(ngModel)]="city.estado"
-                #estado="ngModel" minlength="2" required>
-            <div *ngIf="estado.errors && (estado.dirty || estado.touched)" class="alert alert-danger">
-                <div [hidden]="!(estado.errors && estado.errors['required'])">Digite o Estado.</div>
-                <div [hidden]="!(estado.errors && estado.errors['minlength'])">O Estado deve conter ao menos 2
-                    caracteres.
-                </div>
-            </div>
+
+            <ng-select name="estado" [items]="states" bindLabel="sigla" [(ngModel)]="city.estado"
+                placeholder="Selecione um estado">
+            </ng-select>
+
         </div>
         <!--Group Buttons-->
         <div class="form-group">

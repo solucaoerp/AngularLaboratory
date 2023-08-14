@@ -2,8 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-import { AddressService } from 'src/app/services';
-import { Address } from 'src/app/shared/models';
+import { AddressService, CityService } from 'src/app/services';
+import { Address, City } from 'src/app/shared/models';
 
 @Component({
   selector: 'app-address-form',
@@ -15,14 +15,19 @@ export class AddressFormComponent implements OnInit {
   @ViewChild("formAddress") formAddress!: NgForm;
   address!: Address;
   isNew: boolean = true;
+  cities: City[] = [];
 
   constructor(
     private addressService: AddressService,
+    private cityService: CityService,
     private route: ActivatedRoute,
     private router: Router
   ) { }
 
   ngOnInit(): void {
+
+    this.cities = this.cityService.getAll();
+
     let id = +this.route.snapshot.params['id'];
     if (id) {
       this.isNew = false;

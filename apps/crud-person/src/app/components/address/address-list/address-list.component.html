@@ -8,6 +8,7 @@
             <th>Número</th>
             <th class="text-center">Cidade</th>
             <th class="text-center">Estado</th>
+            <th class="text-center">Tipo</th>
             <th class="text-center">
                 <a [routerLink]="['/addresses/create']" href="#" title="Novo" alt="Novo" class="btn btn-xs btn-success">
                     <i class="fa fa-plus" aria-hidden="true"></i> Novo
@@ -18,8 +19,9 @@
             <td class="text-center">{{address.id}}</td>
             <td>{{address.rua}}</td>
             <td>{{address.numero}}</td>
-            <td class="text-center">{{address.cidade}}</td>
+            <td class="text-center">{{address?.cidade?.nome}}</td>
             <td class="text-center">{{address.estado}}</td>
+            <td class="text-center">{{address.residencial! ? "Residencial" : "Comercial"}}</td>
             <td class="text-center" style="width: 300px">
                 <a href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info"
                     [routerLink]="['/addresses/edit', address.id]">

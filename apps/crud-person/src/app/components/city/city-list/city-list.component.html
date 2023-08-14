@@ -15,7 +15,7 @@
         <tr *ngFor="let city of cities">
             <td class="text-center">{{city.id}}</td>
             <td>{{city.nome}}</td>
-            <td>{{city.estado}}</td>
+            <td>{{city?.estado?.sigla}}</td>
             <td class="text-center" style="width: 300px">
                 <a href="#" title="Editar" alt="Editar" class="btn btn-xs btn-info"
                     [routerLink]="['/cities/edit', city.id]">

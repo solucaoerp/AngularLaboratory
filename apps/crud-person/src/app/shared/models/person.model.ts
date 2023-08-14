@@ -3,4 +3,6 @@ export interface Person {
     nome?: string;
     idade?: number | null;
     dataNascimento?: string;
+    motorista?: string;
+    fumante?: boolean;
 }

@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { SharedModule } from './shared';
     NgbModule,
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    NgSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

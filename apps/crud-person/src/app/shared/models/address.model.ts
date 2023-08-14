@@ -1,3 +1,5 @@
+import { City } from "./city.model";
+
 export interface Address {
     id?: number;
     rua?: string;
@@ -5,6 +7,8 @@ export interface Address {
     complemento?: string;
     bairro?: string;
     cep?: string;
-    cidade?: string;
+    cidade?: City;
     estado?: string;
+    residencial?: boolean;
+    tipoEndereco?: string;
 }

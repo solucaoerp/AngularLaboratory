@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { NgSelectModule } from '@ng-select/ng-select';
+
 import { CityFormComponent, CityListComponent } from 'src/app/components';
 import { CityRoutingModule } from './city-routing.module';
 
@@ -15,7 +17,8 @@ import { CityRoutingModule } from './city-routing.module';
         CommonModule,
         RouterModule,
         FormsModule,
-        CityRoutingModule
+        CityRoutingModule,
+        NgSelectModule
     ]
 })
 export class CityModule { }

@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+import { NgSelectModule } from '@ng-select/ng-select';
+
 import { AddressFormComponent, AddressListComponent } from 'src/app/components';
 import { AddressRoutingModule } from './address-routing.module';
 
@@ -15,7 +17,8 @@ import { AddressRoutingModule } from './address-routing.module';
         CommonModule,
         AddressRoutingModule,
         RouterModule,
-        FormsModule
+        FormsModule,
+        NgSelectModule
     ]
 })
 export class AddressModule { }

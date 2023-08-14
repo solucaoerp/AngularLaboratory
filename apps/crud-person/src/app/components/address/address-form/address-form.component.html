@@ -57,14 +57,11 @@
         <!--Group Cidade-->
         <div class="form-group">
             <label for="cidade">Cidade:</label>
-            <input type="text" class="form-control" id="cidade" name="cidade" [(ngModel)]="address.cidade"
-                #cidade="ngModel" minlength="8" required>
-            <div *ngIf="cidade.errors && (cidade.dirty || cidade.touched)" class="alert alert-danger">
-                <div [hidden]="!(cidade.errors && cidade.errors['required'])">Digite a Cidade.</div>
-                <div [hidden]="!(cidade.errors && cidade.errors['minlength'])">A Cidae deve conter ao menos 8
-                    caracteres.
-                </div>
-            </div>
+
+            <ng-select name="nome" [items]="cities" bindLabel="nome" [(ngModel)]="address.cidade"
+                placeholder="Selecione uma cidade">
+            </ng-select>
+
         </div>
         <!--Group Estado-->
         <div class="form-group">
@@ -77,6 +74,12 @@
                     caracteres.
                 </div>
             </div>
+        </div>
+        <!--Group Residencial-->
+        <div class="form-group">
+            <label for="residencial">Residencial:</label>
+            <input type="checkbox" class="form-check-input" id="residencial" name="residencial"
+                [(ngModel)]="address.residencial" #residencial="ngModel">
         </div>
         <!--Group Buttons-->
         <div class="form-group">
